@@ -1,0 +1,342 @@
+.wrapper {
+	margin: 0px auto;
+	width: 1280px;
+}
+
+h1 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 58px;
+	color: #000000;
+	position: relative;
+	& span {
+		display: inline-block;
+		color: white;
+		position: relative;
+		&:before {
+			content: '';
+			z-index: -1;
+			background-color: #E8331A;
+			position: absolute;
+			width: 104%;
+			height: 110%;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+	}
+}
+
+@keyframes shake {
+	0% {
+		transform: rotate(0deg);
+	}
+	85% {
+		transform: rotate(0deg);
+	}
+	90% {
+		transform: rotate(15deg);
+	}
+	95% {
+		transform: rotate(-15deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.start {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	&__road {
+		position: absolute;
+		right: 15px;
+		margin-left: auto;
+		&-path {
+			position: relative;
+			padding-bottom: 50px;
+			& #osvg {
+				width: auto;
+			}
+			& #dot {
+				position: absolute;
+				transform: translate(-20.5px, -20px);
+				width: 40px;
+				height: 40px;
+			}
+		}
+		&-mess {
+			position: absolute;
+			top: 360px;
+			right: 195px;
+			& p {
+				font-family: 'roboto', sans-serif;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 130%;
+				color: #000000;
+				z-index: 2;
+				position: absolute;
+				width: 590px;
+				top: 60px;
+				left: 80px;
+			}
+		}
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		&-top {
+			display: flex;
+			align-items: center;
+			font-family: 'roboto', sans-serif;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 130%;
+			color: #000000;
+			& svg {
+				margin-left: 12px;
+			}
+		}
+		& h1 {
+			max-width: 961px;
+			margin-top: 60px;
+		}
+	}
+	&__circle {
+		margin-top: 341px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 1200px;
+		position: relative;
+		&-container {
+			position: relative;
+			& svg {
+				position: relative;
+				transform: scale(1, -1);
+				& #prog {
+					// transform: scale(1, -1);
+					transform-origin: 50% 50%;
+					// stroke-dasharray: calc(1225.393310546875 * 2);
+					stroke-dasharray: 1225.393310546875;
+					// stroke-dashoffset: 0;
+					stroke-width: 4;
+					stroke: #FF0000;
+					fill: transparent;
+				}
+				& #cirMarker {
+					position: absolute;
+				}
+			}
+			&-text {
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+				transition: 0.3s;
+				&.active {
+					opacity: 1;
+					visibility: visible;
+					pointer-events: all;
+					transition: 0.3s;
+				}
+				& h2 {
+					font-style: normal;
+					font-weight: 700;
+					font-size: 65px;
+					line-height: 119%;
+					text-align: center;
+					color: #000000;
+					& span {
+						font-family: 'muller', sans-serif;
+					}
+				}
+				& p {
+					font-style: normal;
+					font-weight: 400;
+					font-size: 25.9271px;
+					line-height: 31px;
+					text-align: center;
+					color: #000000;
+					margin-top: 22px;
+					max-width: 231px;
+				}
+			}
+			&-bag {
+				animation: shake 3s ease infinite;
+				position: absolute;
+				left: -400px;
+				top: 200px;
+			}
+		}
+	}
+}
+
+.sec {
+	position: relative;
+	height: 200vh;
+}
+
+.cbig {
+	height: 400vh;
+}
+
+.second {
+	height: 100vh;
+	background-color: white;
+	position: fixed;
+	width: 100vw;
+	top: 0;
+	right: -100vw;
+	z-index: 5;
+	overflow: hidden;
+	&__container {
+		max-width: 1182px;
+		padding-top: 67px;
+		position: relative;
+		& h2 {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 40px;
+			line-height: 48px;
+			color: #000000;
+		}
+		&-swiper {
+			margin-top: 69px;
+			position: relative;
+			& .swiper-slide {
+				display: flex;
+				flex-wrap: nowrap;
+				flex-direction: column;
+				&-mess {
+					background: #F5F5F5;
+					mix-blend-mode: normal;
+					box-shadow: 3.62495e-15px 20px 30px rgba(49, 49, 49, 0.2), inset -1.32915e-15px -10px 10px rgba(181, 181, 181, 0.6), inset 1.32915e-15px 20px 20px #FFFFFF;
+					border-radius: 32.5187px;
+					position: relative;
+					padding: 72px;
+					padding-bottom: 90px;
+					& svg {
+						position: absolute;
+						top: -21px;
+						left: 45px;
+					}
+					& p {
+						font-family: 'roboto', sans-serif;
+						font-style: normal;
+						font-weight: 400;
+						font-size: 24px;
+						line-height: 130%;
+						color: #000000;
+						z-index: 2;
+					}
+				}
+				&-human {
+					margin-top: 38px;
+					padding-left: 30px;
+					display: flex;
+					flex-wrap: nowrap;
+					&-img {
+						width: 119px;
+						height: 119px;
+						border-radius: 50%;
+					}
+					&-text {
+						margin-left: 33px;
+						& h3 {
+							font-style: normal;
+							font-weight: 400;
+							font-size: 32px;
+							line-height: 130%;
+							color: #000000;	
+						}
+						& p {
+							margin-top: 6px;
+							font-style: normal;
+							font-weight: 400;
+							font-size: 16px;
+							line-height: 19px;
+							color: #000000;
+							max-width: 200px;
+						}
+					}
+				}
+			}
+			& .swiper-button-next {
+				background: linear-gradient(180deg, #496172 0%, #618298 100%);
+				box-shadow: 4.08216e-16px 6.66667px 13.3333px rgba(17, 23, 27, 0.24), inset -1.27e-16px -2.07407px 2.07407px #465D6D, inset 1.27e-16px 2.07407px 2.07407px #65879E;
+				transform: matrix(-1, 0, 0, 1, 0, 0);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+				position: absolute;
+				right: -30px;
+				top: 97px;
+				& svg {
+					transform: rotate(180deg);
+				}
+			}
+			& .swiper-button-prev {
+				background: linear-gradient(180deg, #496172 0%, #618298 100%);
+				box-shadow: 4.08216e-16px 6.66667px 13.3333px rgba(17, 23, 27, 0.24), inset -1.27e-16px -2.07407px 2.07407px #465D6D, inset 1.27e-16px 2.07407px 2.07407px #65879E;
+				transform: matrix(-1, 0, 0, 1, 0, 0);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+				position: absolute;
+				left: -30px;
+				top: 97px;
+			}
+			& .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+				opacity: 0.7;
+			}
+		}
+	}
+	&__line {
+		position: absolute;
+		bottom: 50px;
+		left: 21px;
+		& #ship {
+			position: absolute;
+			transform: translate(-27px, -20px);
+			opacity: 0;
+			// transition: opacity 0.1s;
+		}
+		& #air {
+			position: absolute;
+			transform: translate(-27px, -20px);
+			opacity: 0;
+			// transition: opacity 0.1s;
+		}
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	.start__container-top svg {
+		margin-left: 0px;
+	}
+}
+
+
+
